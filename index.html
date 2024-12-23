@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Josefin+Slab:wght@100..700&family=Poiret+One&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mary's Page</title>
+</head>
+<body>
+    <div class="header">
+        <div class="nav-div">
+            <a class='nav-link' href=#about>About me</a>
+        </div>
+        <div class="nav-div">
+            <a class='nav-link' href=#photo>Photo</a>
+        </div>
+        <div class="nav-div">
+            <a class='nav-link' href=#section-3>Technical Tools</a>
+        </div>
+        <div class="nav-div">
+            <a class='nav-link' href=#section-4>Places of interest</a>
+        </div>
+        <div class="nav-div">
+            <a class='nav-link' href=#section-5>Learning Resources I Love</a>
+        </div>
+        <div class="nav-div">
+            <a class='nav-link' href=#footer>Contact Me</a>
+        </div>
+    </div>
+
+    <div class="upper-section">
+    <div class="logo-div">
+        <img class="logo" src="maman.png" alt="Logo">
+        <div class="about" id="about">
+                <p class="section-1">Hello! I'm Masha, or Mary as I go by in England.</p>
+                <p class="section-1">I was born and raised in Moscow, where both my parents worked as scientists. After completing school, I pursued a degree in Economics and Engineering. I began my career in consulting, specialising in real estate valuation, which led to exciting projects and business trips.</p>
+                <p class="section-1">Over time, I began to feel disconnected from the direction of my career and the environment in my country, which prompted me to move to England. Once here, I decided it was the perfect opportunity to explore something new. I started studying CS50: Introduction to Computer Science, followed by a data analytics training programme. Now, I’m thrilled to continue my journey into tech.</p>
+        </div>
+    </div>
+            <div class="photo" id="photo">
+            <div class="main-photo">
+                <img id="main-image" src="main-photo.jpg" alt="Main Photo">
+            </div>
+        <div class="gallery-div">
+            <div class="photo-text">
+                <div class="line top-line"></div>
+                <p class="photo-description" id="photo-description"></p>
+                <div class="line bottom-line"></div>
+            </div>
+            <div class="thumbnail-gallery">
+                <img class="thumbnail" src="izbushka.jpg" alt="Izbushka" onclick="changeMainImage('izbushka.jpg')">
+                <img class="thumbnail" src="spb.jpg" alt="Saint Petersbourgh beach" onclick="changeMainImage('spb.jpg')">
+                <img class="thumbnail" src="snow.jpg" alt="Snowy" onclick="changeMainImage('snow.jpg')">
+                <img class="thumbnail" src="moscow.jpg" alt="In Moscow" onclick="changeMainImage('moscow.jpg')">
+                <img class="thumbnail" src="main-photo.jpg" alt="Main Photo" onclick="changeMainImage('main-photo.jpg')">
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="lower-section">
+
+        <div id="section-3">
+            <h1 class="tools">Some of the Technical Tools I've used so far:</h1>
+            <div>
+                <ul>Programming languages</ul>
+                    <li>Python</li>
+                    <li>Javascript</li>
+                    <li>SQL</li>
+            </div>  
+            <div>
+                <ul>Visualisation tools</ul>
+                    <li>Tableau</li>
+                    <li>Power BI</li>
+                    <li>Clik Sense</li> 
+            </div>     
+        </div>
+
+        <div id="section-4">
+            <h1>Places of Interest</h1>
+            <p>Here are some places I visited over the past two years and grew fond of.</p>
+            <table>
+                <tr>
+                    <th class="table-header">Place</th>
+                    <th class="table-header">Why is it great</th>
+                    <th class="table-header">Photo</th>
+                    <th class="table-header">Map</th>
+                </tr>
+                <tr>
+                    <th>Dartmoor National Park</th>
+                    <th>Offers breathtaking moorland landscapes, diverse wildlife, and scenic trails, making it a perfect destination for hiking and nature enthusiasts.</th>
+                    <th>
+                        <img class="table-img" src="ponies.jpeg" alt="Dartmoor">
+                    </th>
+                    <th>
+                        <a class="directions" href="https://maps.app.goo.gl/ijYEjMHhP8R1BCUt9" target="_blank" >Directions</a>
+                    </th>
+                </tr>
+                <tr>
+                    <th>The Barbican Center</th>
+                    <th>It is a masterpiece of brutalist architecture, offering a unique cultural experience with its striking design, world-class performances, and serene gardens amidst the urban landscape.</th>
+                    <th>
+                        <div class="table-img-container">
+                            <img class="table-img" src="barbican.jpg" alt="Barbican">
+                        </div>
+                        
+                    </th>
+                    <th>
+                        <a class="directions" href="https://maps.app.goo.gl/WzEYxWwyCKAnGD5J8" target="_blank">Directions</a>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Botany Bay in Kent</th>
+                    <th>It is a lovely spot with golden sands, striking chalk cliffs, and a peaceful vibe that’s perfect for a day out by the sea.</th>
+                    <th>
+                        <div class="table-img-container">
+                            <img class="table-img" src="botany bay.jpeg" alt="Botany Bay">
+                        </div>
+                    </th>
+                    <th>
+                        <a class="directions" href="https://maps.app.goo.gl/Mm8Vhfgepwi1FTen6" target="_blank">Directions</a>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Any food festival</th>
+                    <th>Food festivals may be events rather than places, but they’re worth mentioning as they offer a fantastic way to explore delicious dishes, discover new flavors, and enjoy a fun, lively atmosphere with fellow food enthusiasts.</th>
+                    <th>
+                        <img class="table-img" src="food festival.jpeg" alt="Food Festival">
+                    </th>
+                    <th>
+                        <a class="directions" href="https://greatbritishfoodfestival.com/" target="_blank">Directions</a>
+                    </th>
+                </tr>
+            </table>
+        </div>
+
+
+        <div id="section-5">
+            <h1>Coding Resources I became fond of</h1>
+            <p>During my self-education and career transition studies, I utilised several resources and would like to share those that were particularly helpful.</p>
+            <ol>
+                <li><a class="platforms" href="https://www.sqlhabit.com/" target="_blank">SQL Habit</a>: helps you familiarise yourself with a variety of marketing metrics by analysing data using SQL.</li>
+                <li><a class="platforms" href="https://edube.org/" target="_blank">OpenEDG Python Institute</a>: I discovered this resource while studying Python and absolutely loved its detailed approach.</li>
+                <li><a class="platforms" href="https://www.freecodecamp.org/" target="_blank">FreeCodeCamp</a>: good to start with Javascript.</li>
+                <li><a class="platforms" href="https://skills.yourlearning.ibm.com/" target="_blank">IBM SkillsBuild</a> digital learning platform.</li>
+            </ol>
+        </div>
+       
+    
+        <form>
+            <div class="form-group">
+                <label for="username">Enter your name:</label>
+                <input type="text" id="username" name="username" placeholder="your name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Enter email:</label>
+                <input type="email" id="email" name="email" placeholder="your email" required>
+            </div>
+                <div class="form-group">          
+                <label for="feedback">Any comments and feedback:</label>
+            </div>
+            <textarea name="feedback" id="feedback" cols="30" rows="10" placeholder="Leave a comment or suggestion..."></textarea>
+            <input type="submit">
+        </form>
+        <footer id="footer">
+            <p>© 2024 Mary Petrichenko. All rights reserved.</p>
+            <p>This webpage was designed for educational purposes as part of a learning project.</p>
+            <p>Connect with me: 
+                <a href="https://www.linkedin.com/in/mary-petrichenko-9b88b226/" class="linkedInIcon" target="_blank">
+                    <img src="LI-In-Bug.png" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/MaryPetrichenko" class="githubIcon" target="_blank">
+                    <img src="GitHub_Logo.png" alt="GitHub">
+                </a>
+            </p>
+        </footer>
+    </div>
+
+    <script src="functions.js" defer></script>
+    
+</body>
+</html>
