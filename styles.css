@@ -9,6 +9,10 @@
     --color-7: #D0D2D4;
     --color-8: #79848F;
 }
+
+
+/* Styling the navigation panel */
+
 .header {
     height: 5vh;
     border-top: 1px solid var(--color-7);
@@ -16,13 +20,14 @@
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    overflow: hidden; 
 }
 .grey-background {
-    position: absolute; /* Position the image absolutely */
+    position: absolute; 
     top: 0;
     left: 0;
     width: 100%;
-    object-fit: cover; /* Make sure the image covers the area without distortion */
+    object-fit: cover; 
     z-index: -1; /* Place the image behind the content */
 }
 .nav-div {
@@ -32,54 +37,83 @@
 .nav-link{
     font-family: 'Cormorant Garamond', sans-serif;
     font-weight: 900;
-    font-size: 3vh;
+    font-size: clamp(1rem, 2.5vw, 3vh);
     font-style: normal;
     text-decoration: none;
     color: var(--color-2)
 }
+
+/* The rest of the page is divided into two sections */
+
 .upper-section {
     background-image: url('grey.jpg'); 
     background-size: cover;
 }
 
 .lower-section {
-    position: relative; /* Ensures that the pseudo-element can be positioned */
+    position: relative; 
     background-image: url(white.jpg);
     background-size: cover;
     box-shadow: -5px -10px 18px #888888;
 }
 
-
-
-
+/* Styling the section that contains logo and short bio */
 
 
 .logo-div {
-    width: 100%; /* Full width of the screen */
-    height: 55vh; /* % of the screen height */
-    display: flex; /* Enables flex layout for child alignment */
-    align-items: center; /* Centers picture vertically */
+    width: 100%; 
+    display: flex; 
+    align-items: center; 
     overflow: auto; 
-    
     }
 .logo {
-    height: 80%; /* Scales the image relative to the div */
-    margin-left: 30px; /* Adds indentation to the left */
+    height: 25em; 
+    margin-left: 3vh; 
+    max-height: 25vh;
     }
 .section-1 {
     font-family: 'Cormorant Garamond', sans-serif;
     color: var(--color-2);
     font-weight: 900;
-    font-size: 3vh;
+    font-size: clamp(1rem, 2.5vw, 3vh);
     padding: 5px 5px 5px 45px;
     font-size: 1 vh;
 }
+
+/* For small screens */
+
+@media (min-width: 768px) {
+    .logo-div {
+        flex-direction: row; 
+        justify-content: flex-start; 
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-div {
+        flex-direction: column; 
+        align-items: center; 
+    }
+
+    .logo {
+        margin-bottom: 10px; 
+        max-height: 5vh; 
+    }
+
+    .section-1 {
+        text-align: center; 
+        padding: 5px 5px; 
+    }
+}
+
+
+/* Styling the photo section */
 
 .photo{
     display: flex;
     justify-content: space-between; 
     align-items: flex-start;
-    gap: 10px;
+    gap: 3px;
     }
 .gallery-div {
     display: grid;
@@ -94,7 +128,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    max-height: 82vh;
+    max-height: 90vh;
     padding: 5px;
     overflow: hidden; 
 }
@@ -104,7 +138,7 @@
     justify-content: center; 
     align-items: center;
     max-height: 55vh; 
-    width: 55vh;
+    width: 55vw;
     padding: 5px;
     overflow: hidden; 
 }
@@ -112,6 +146,7 @@
 #main-image {
     object-fit: contain;
     max-height: 50vh;
+    max-width: 35vw;
 }
 .thumbnail-gallery {
     display: flex;
@@ -122,6 +157,7 @@
 .thumbnail {
     max-width: 20vh;
     max-height: 20vh;
+    max-width: 5vw;
     width: auto;
     height: auto;
     opacity: 0.6;
@@ -143,7 +179,7 @@
     color: var(--color-2);
     font-weight: 600;
     font-style: italic;
-    font-size: 4vh;
+    font-size: clamp(1.3rem, 2.5vw, 3vh);
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
@@ -163,25 +199,28 @@
 
 .top-line {
     background-color: var(--color-2);
-    margin: 3vh 3vh 3vh 30vh;
+    margin: 3vh 20vw 3vh 3vw;
     
 }
 
 .bottom-line {
 
     background-color: var(--color-2);
-    margin: 3vh 3vh 3vh 55vh;
+    margin: 3vh 3vw 3vh 20vw;
 }
 
 .show-description .top-line {
-    width: 30vh;
+    width: 15vw;
     opacity: 0.7;
 }
 
 .show-description .bottom-line {
-    width: 30vh;
+    width: 15vw;
     opacity: 0.7;
 }
+
+
+/* Styling the section with unordered lists */
 
 #section-3 {
     display: grid;
@@ -191,7 +230,6 @@
 
 
 .tools {
-
     grid-column: span 2;
 }
 
@@ -200,53 +238,59 @@
     margin: 90vh;
 }
 
-/* Reset styling for custom tag header1 */
 h1 {
-    display: block; /* Ensures it behaves like a block-level element */
-    font-size: 2em; /* Adjust font size as needed */
-    margin: 0; /* Removes any default margins */
+    display: block; 
+    font-size: clamp(1.5rem, 2.5vw, 3vh); 
+    margin: 0;
     text-align: center;
 }
 
 #section-3 h1, #section-4 h1, #section-5 h1 {
-    text-align: center; /* Centers the text */
-    font-weight: bold; /* Makes the text bold */
-    color: var(--color-2); /* Example of using a variable for text color */
-    margin-top: 10px; /* Adds some spacing */
-    margin-bottom: 10px; /* Adds some spacing */
+    text-align: center; 
+    font-weight: bold; 
+    color: var(--color-2); 
+    margin-top: 10px; 
+    margin-bottom: 10px; 
 }
 
 #section-3 ul{
-    text-align: center; /* Centers the text */
-    font-weight: bold; /* Makes the text bold */
-    color: var(--color-2); /* Example of using a variable for text color */
-    margin-top: 10px; /* Adds some spacing */
-    margin-bottom: 10px; /* Adds some spacing */
+    text-align: center;
+    font-weight: bold; 
+    color: var(--color-2); 
+    margin-top: 10px; 
+    margin-bottom: 10px; 
     font-size: 1.2em;
     margin-left: -15px;
 }
 
 #section-3 li{
-    color: var(--color-2); /* Example of using a variable for text color */    
-    margin-top: 10px; /* Adds some spacing */
-    margin-bottom: 5px; /* Adds some spacing */
+    color: var(--color-2); 
+    margin-top: 10px; 
+    margin-bottom: 5px; 
     margin-left: 20px;
     font-size: 1em;
 }
 
+/* Styling the section with the table */
 
-.table-header {
-    font-weight: bold;
-}
 
 #section-4 table {
-    width: 80%; /* Restrict the table width to 80% of the total width */
-    margin: 0 auto; /* Center the table */
-    border-collapse: collapse; /* Remove space between cells */
-    table-layout: fixed; /* Fix column width */
+    width: 95%; 
+    margin: 0 auto; 
+    border-collapse: collapse; 
+    table-layout: fixed; 
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
 }
+
+#section-4 .table-header {
+    font-weight: bold;
+    background-color: var(--color-2);
+    color: var(--color-3);
+}
+
 #section-4 th, #section-4 td {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(0.7rem, 2vw, 2.5vh);
     padding: 10px; /* Add spacing inside cells */
     text-align: left; /* Align text to the left */
     font-weight: bold; /* Make text bold */
@@ -254,8 +298,6 @@ h1 {
     border: 1px solid rgba(0, 0, 0, 0.1); /* Thin border with a shadow-like effect */
     background-color: rgba(255, 255, 255, 0.3); /* Slightly opaque white for header background */
 }
-
-
 
 /* Set individual column widths */
 #section-4 .table-header:first-child {
@@ -294,58 +336,54 @@ h1 {
     color: var(--color-2);
 }
 
-
+/* styling the section with ordered list */
 
 #section-5 li,
 #section-5 ol, 
 .platforms {
     font-family: "Cormorant Garamond", serif;
-    font-size: 20px;
+    font-size: clamp(1rem, 2.5vw, 3vh);
     font-weight: bold;
-    color: var(--color-2); /* Ensures the same color for both */
+    color: var(--color-2); 
     margin-top: 10px;
     margin-bottom: 10px;
-    text-decoration: none; /* Remove underline from <a> */
+    text-decoration: none; 
 
 }
 
 #section-4 p,
 #section-5 p{
-    text-align: center; /* Centers the text */
-    font-weight: bold; /* Makes the text bold */
-    color: var(--color-2); /* Example of using a variable for text color */
-    margin-top: 10px; /* Adds some spacing */
-    margin-bottom: 10px; /* Adds some spacing */
-    font-size: 1.2em;
+    text-align: center; 
+    font-weight: bold; 
+    color: var(--color-2);
+    margin-top: 20px; 
+    margin-bottom: 20px; 
+    font-size: clamp(1rem, 2.5vw, 3vh);
     
 }
-
-
 
 #section-5 {
     margin-left: 10%;
     margin-right: 10%;
 }
 
-
-
 .platforms:hover {
     font-weight: bold;
-    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8); /* Stronger text shadow */
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.8); /* Stronger background shadow */
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8); 
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.8); 
 }  
 
+/* Styling the footer */ 
+
 footer .linkedInIcon img {
-    width: 40px;  /* Set the desired width of the image */
-    height: auto; /* Maintain aspect ratio */
-    /* Alternatively, you could use height if you want to set that instead */
-    /* height: 40px; */
+    width: 40px;  
+    height: auto; 
 }
 form {
-    width: 100%;
-    max-width: 400px;
+    width: 400px;
+    max-width: 75vw;
     margin: 3% 10% 3% 10%;
-    padding: 20px;
+    padding: 1vh;
     border: 1px solid #ccc;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
